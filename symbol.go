@@ -33,7 +33,7 @@ func (as *ApiService) Symbols(market string) (*ApiResponse, error) {
 	if market != "" {
 		p["market"] = market
 	}
-	req := NewRequest(http.MethodGet, "/api/v1/symbols", p)
+	req := NewRequest(http.MethodGet, "/api/v2/symbols", p)
 	return as.Call(req)
 }
 
